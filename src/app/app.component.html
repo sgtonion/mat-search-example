@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-toolbar>Search filter for *Mat Select* component</mat-toolbar>
+  <mat-card-content>
+    <mat-form-field class="example-form-field">
+      <mat-label>State</mat-label>
+      <mat-select>
+        <input placeholder="Search..." matInput type="text" (keyup)="onKey($event.target.value)" class="example-input">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let state of selectedStates" [value]="state">{{state}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
